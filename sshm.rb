@@ -11,7 +11,7 @@ class Sshm < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/michael-ltm/sshm/releases/download/v0.1.0/sshm_darwin_amd64.tar.gz"
-      sha256 "9611a9320fdce1fe21d9b2f0c91394fc6de542f9195ece42930e19cbe8e2ce84"
+      sha256 "1d1c45c90d0afd95c3fc79f3470c1c12d28731053948b10c7e4e75b75f0fa974"
 
       define_method(:install) do
         bin.install "sshm"
@@ -19,7 +19,7 @@ class Sshm < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/michael-ltm/sshm/releases/download/v0.1.0/sshm_darwin_arm64.tar.gz"
-      sha256 "86ad40626fff0f6b0e6687cdfea4ae171a8588c1015c551c46b1e92c3f6d632d"
+      sha256 "589e3191220ac55173e7ba8269d3f35cf5cec73ab1c23db2b41c42dd872aabe1"
 
       define_method(:install) do
         bin.install "sshm"
@@ -30,14 +30,14 @@ class Sshm < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/michael-ltm/sshm/releases/download/v0.1.0/sshm_linux_amd64.tar.gz"
-      sha256 "37d4bf118817c89c85d8cdf0000f704bbc09424c8d941f9460e06378d114188f"
+      sha256 "e21d3ced593e359541c8a4fc64ba678b23394b6c4002d2dc0daeb2f00037d82b"
       define_method(:install) do
         bin.install "sshm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/michael-ltm/sshm/releases/download/v0.1.0/sshm_linux_arm64.tar.gz"
-      sha256 "7ddd7066ec26ad41b1ffe3d65ae4d3f540b21c22221946a37f7136034f5f6535"
+      sha256 "751eb160ba8649bfbb5a617d08cefa96e9a3c2d4d8067a64521534cf4e57ebdb"
       define_method(:install) do
         bin.install "sshm"
       end
