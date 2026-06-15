@@ -5,21 +5,21 @@
 class Sshm < Formula
   desc "A pretty, AI-friendly SSH connection manager"
   homepage "https://github.com/michael-ltm/sshm"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/michael-ltm/sshm/releases/download/v0.2.0/sshm_darwin_amd64.tar.gz"
-      sha256 "cfb5905a6106dec45da4186a0491121374b07447f920fe9d03c13b7e3d9feef8"
+      url "https://github.com/michael-ltm/sshm/releases/download/v0.3.0/sshm_darwin_amd64.tar.gz"
+      sha256 "8a4ec192948f1effbdc201f99aa3bacdfbd84b4c0922720c4fa6b36dfc9fd456"
 
       define_method(:install) do
         bin.install "sshm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/michael-ltm/sshm/releases/download/v0.2.0/sshm_darwin_arm64.tar.gz"
-      sha256 "367e54b88a9e8684d8133340be13d4c271b7a2026ae9bca8567d6f5fb72a4ff2"
+      url "https://github.com/michael-ltm/sshm/releases/download/v0.3.0/sshm_darwin_arm64.tar.gz"
+      sha256 "727f0503d622abe740fc6e4a3cefe3f03b3ac0dc0a392eefb343a38b417aca37"
 
       define_method(:install) do
         bin.install "sshm"
@@ -29,15 +29,15 @@ class Sshm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-ltm/sshm/releases/download/v0.2.0/sshm_linux_amd64.tar.gz"
-      sha256 "5bbf61d38018d4b4b2f217075812031d8423648b42cda76a696d1ca6b398d0e4"
+      url "https://github.com/michael-ltm/sshm/releases/download/v0.3.0/sshm_linux_amd64.tar.gz"
+      sha256 "e059499460a35ec74d3eab54185201dad3a4f7a43f5bb17adb06181c32de430c"
       define_method(:install) do
         bin.install "sshm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-ltm/sshm/releases/download/v0.2.0/sshm_linux_arm64.tar.gz"
-      sha256 "10137f960af15a7e647ee5bf7ed061f124d3eef7dd53db249b3186c501d9d966"
+      url "https://github.com/michael-ltm/sshm/releases/download/v0.3.0/sshm_linux_arm64.tar.gz"
+      sha256 "1515d2c0dba25b797fabc7df52a6328186a0bb9ebcefe755fb7e8f91b341988f"
       define_method(:install) do
         bin.install "sshm"
       end
