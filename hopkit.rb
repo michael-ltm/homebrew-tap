@@ -5,21 +5,21 @@
 class Hopkit < Formula
   desc "AI-friendly SSH manager with a built-in MCP server"
   homepage "https://github.com/michael-ltm/hopkit"
-  version "0.8.1"
+  version "0.8.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.1/hopkit_darwin_amd64.tar.gz"
-      sha256 "ed378660f2f9658d16d76903764a5affdfcf89b098279cc90ab4a640a846878a"
+      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.2/hopkit_darwin_amd64.tar.gz"
+      sha256 "3dd8c4a9d20bb47f1db3959ab87d889d2006abd1a16ea98ea6e79d7c17c90fcc"
 
       define_method(:install) do
         bin.install "hopkit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.1/hopkit_darwin_arm64.tar.gz"
-      sha256 "2dbc381cf60029afcefdd3ef0da080a111f7b1316bdde9499ddb08653c426f1a"
+      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.2/hopkit_darwin_arm64.tar.gz"
+      sha256 "5878f6c3e0ef025a1cc8b4eeccb2ae963572fcadad85d4002d344fef5584dd33"
 
       define_method(:install) do
         bin.install "hopkit"
@@ -29,15 +29,15 @@ class Hopkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.1/hopkit_linux_amd64.tar.gz"
-      sha256 "1536f424e8993cd19ccb05983ca63495c44f5f56039cb9722df75a5efc4ae065"
+      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.2/hopkit_linux_amd64.tar.gz"
+      sha256 "3040278c3af987e083abae3bc9503f308e758988a29d6d7cfa473551e2447fe7"
       define_method(:install) do
         bin.install "hopkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.1/hopkit_linux_arm64.tar.gz"
-      sha256 "4529680185ebdde4bd1c23803df84b4880e854f147d92d9c19df720cb824b116"
+      url "https://github.com/michael-ltm/hopkit/releases/download/v0.8.2/hopkit_linux_arm64.tar.gz"
+      sha256 "06c7f13cb096750aa0f2d7d7b188deedb8d0006f8aade6df16dc2f24b3f55866"
       define_method(:install) do
         bin.install "hopkit"
       end
